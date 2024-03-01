@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form for credit card</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+
+            <div id="card" class="card">
+                <div class="card__front front">
+                    <div class="front__header">
+                        <div class="">multybank | Superpuper Bank</div>
+                        <div class="">world</div>
+                    </div>
+                    <div class="front__middle">
+                        <div class="chip">
+                            <svg width="10" height="8" version="1.1" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <path
+                                        d="m0.39453 0c-0.21727 0-0.39453 0.18766-0.39453 0.41768v7.1646c0 0.23002 0.17726 0.41768 0.39453 0.41768h2.5156c0.21727 0 0.39453-0.18766 0.39453-0.41768v-1.6459h2.9104v-2.5971h0.48024v4.243c0 0.23002 0.17726 0.41768 0.39453 0.41768h2.5156c0.21727 0 0.39453-0.18766 0.39453-0.41768v-7.1646c0-0.23002-0.17726-0.41768-0.39453-0.41768h-2.5156c-0.21727 0-0.39453 0.18766-0.39453 0.41768v1.7162h-2.8232v2.3407h-0.5674v-4.0569c0-0.23002-0.17726-0.41768-0.39453-0.41768zm0 0.10545h2.5156c0.1636 0 0.29492 0.13902 0.29492 0.31223v2.2125h-3.1055v-2.2125c0-0.1732 0.13132-0.31223 0.29492-0.31223zm6.6953 0h2.5156c0.1636 0 0.29492 0.13902 0.29492 0.31223v2.2125h-3.1055v-2.2125c0-0.1732 0.13132-0.31223 0.29492-0.31223zm-3.1181 2.1339h2.7236v0.99457h-0.57985v2.5971h-2.8108v-1.251h0.66701zm-3.8721 0.49832h3.1055v2.5247h-3.1055zm6.6953 0h3.1055v2.5247h-3.1055zm-6.6953 2.6301h3.1055v2.2145c0 0.1732-0.13132 0.31016-0.29492 0.31016h-2.5156c-0.1636 0-0.29492-0.13696-0.29492-0.31016zm6.6953 0h3.1055v2.2145c0 0.1732-0.13132 0.31016-0.29492 0.31016h-2.5156c-0.1636 0-0.29492-0.13696-0.29492-0.31016z"
+                                        style="color:#000000;fill:#000000;paint-order:markers fill stroke" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="wireless">
+                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8.288 15.038a5.25 5.25 0 0 1 7.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 0 1 1.06 0Z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div data-card-number class="front__card-number">
+                        <span>####</span>
+                        <span>####</span>
+                        <span>####</span>
+                        <span>####</span>
+                    </div>
+                    <div class="front__footer footer">
+                        <div id="holder-name" class="footer__holder-name">Mister Bond вавфfdsfdsf</div>
+                        <div class="footer__expire-date">
+                            <div id="month">##</div>/
+                            <div id="year">##</div>
+                        </div>
+                        <div class="footer__logo-mastercard">
+                            <div class="footer__logo-mastercard--red"></div>
+                            <div class="footer__logo-mastercard--yellow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__back">
+                    <div id="cvc" class="cvc">000</div>
+                </div>
+            </div>
+
+        <form class="form" action="">
+            <div class="form__card-namber form__input-wrap">
+                <label for="input-card-number">Card Number</label>
+                <input class="form__input" type="text" name="card-number" id="input-card-number">
+            </div>
+            <div class="form__holder-name form__input-wrap">
+                <label for="input-holder-name">Holder Name</label>
+                <input class="form__input" type="text" name="holder-name" id="input-holder-name">
+            </div>
+            <div class="form__footer">
+                <select class="month" name="month" id="input-month">
+                    <option value="##">--Select Month--</option>
+                    <option value="01">January-01</option>
+                    <option value="02">February-02</option>
+                    <option value="03">March-03</option>
+                    <option value="04">April-04</option>
+                    <option value="05">May-05</option>
+                    <option value="06">June-06</option>
+                    <option value="07">July-07</option>
+                    <option value="08">August-08</option>
+                    <option value="09">September-09</option>
+                    <option value="10">October-10</option>
+                    <option value="11">November-11</option>
+                    <option value="12">December-12</option>
+                </select>
+                <select class="year" name="year" id="input-year">
+                    <option value="##">--Year--</option>
+                    <option value="24">2024</option>
+                    <option value="25">2025</option>
+                    <option value="26">2026</option>
+                    <option value="27">2027</option>
+                    <option value="28">2028</option>
+                </select>
+                <input class="form__input" type="text" name="cvc" id="input-cvc" size="3" >
+            </div>
+        </form>
+    </div>
+</body>
+</html>

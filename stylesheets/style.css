@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-size: 14px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.card {
+  margin-top: 2rem;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 12rem;
+  perspective: 500px;
+}
+.card__front, .card__back {
+  width: 16rem;
+  height: 10rem;
+  border-radius: 10px;
+  background: linear-gradient(to top left, #706f6f, #292929);
+  padding: 1rem;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  transition: transform 500ms ease-in-out;
+}
+.card__back {
+  display: flex;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+.card__back .cvc {
+  height: 1.5rem;
+  width: 50%;
+  text-align: right;
+  background-color: #f8f4d2;
+  font-size: 16px;
+  padding-right: 0.2rem;
+  border-radius: 2px;
+}
+
+.front__header {
+  display: flex;
+  font-size: 10px;
+  justify-content: space-between;
+  color: #b3b1b1;
+  margin-bottom: 1.5rem;
+}
+.front__middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.front__card-number {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  padding-inline: 0.25rem;
+}
+
+.chip {
+  width: 1.75rem;
+  height: 1.5rem;
+  border-radius: 4px;
+  background-color: #f8f4d2;
+}
+.chip svg {
+  width: 100%;
+  height: 100%;
+}
+
+.wireless svg {
+  transform: rotate(90deg);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+  gap: 0.5rem;
+}
+.footer__holder-name {
+  flex-grow: 1;
+  border: 1px solid #000;
+  height: 100%;
+  border-radius: 4px;
+  font-size: 12px;
+  padding-inline: 0.25rem;
+  padding-block: 0.4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.footer__expire-date {
+  font-size: 12px;
+  display: flex;
+}
+.footer__logo-mastercard {
+  display: flex;
+}
+.footer__logo-mastercard--red, .footer__logo-mastercard--yellow {
+  height: 1.75rem;
+  width: 1.75rem;
+  border-radius: 50%;
+}
+.footer__logo-mastercard--red {
+  background-color: #eb001b;
+  margin-right: -10px;
+}
+.footer__logo-mastercard--yellow {
+  background-color: #f79e1b;
+  mix-blend-mode: hard-light;
+}
+
+.form__input-wrap {
+  display: grid;
+  margin-bottom: 1rem;
+}
+.form__input {
+  padding: 8px 15px;
+  outline: none;
+}
+.form__input:focus {
+  border-color: #000;
+}
+.form__footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.25rem;
+}
+
+select {
+  background: none;
+}
+
+.to-backface .card__front {
+  transform: rotateY(-180deg);
+}
+.to-backface .card__back {
+  transform: rotateY(0deg);
+}
+
+.selected {
+  background-color: #b3b1b1;
+}
+
+.cursor {
+  border-bottom: 2px solid #000;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
