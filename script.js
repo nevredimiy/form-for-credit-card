@@ -42,10 +42,10 @@ inputCardNumber.addEventListener("keyup", (e) => {
     if (inputCardNumber.value.length > 19) {
         inputCardNumber.value = inputCardNumber.value.slice(0, -1);
     }
-    //Позволяет вводить только целые числа - ДОРАБОТАТЬ - регулярные выражение некорректно работает
-    // if (/\D/.test(inputCardNumber.value)) {
-    //     inputCardNumber.value = inputCardNumber.value.slice(0, -1);
-    // }
+
+    if (/(\D^\s)/.test(inputCardNumber.value)) {
+        inputCardNumber.value = inputCardNumber.value.slice(0, -1);
+    }
     cardNumber.setAttribute("data-card-number", inputCardNumber.value.replaceAll(' ', '').padEnd(16, "#"))
     Array.from(cardNumber.children).forEach((item, idx) => {
         item.innerHTML = cardNumber.getAttribute("data-card-number").slice(4*idx,4*(idx+1))
@@ -90,4 +90,10 @@ inputMonth.addEventListener("focus", () => {
 })
 inputMonth.addEventListener("focusout", () => {
     month.classList.remove("selected")
+})
+inputYear.addEventListener("focus", () => {
+    year.classList.add("selected")
+})
+inputYear.addEventListener("focusout", () => {
+    year.classList.remove("selected")
 })
