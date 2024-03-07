@@ -15,6 +15,10 @@ body {
   height: 100%;
 }
 
+.contents {
+  perspective: 90px;
+}
+
 .card {
   margin-top: 2rem;
   position: relative;
@@ -22,7 +26,8 @@ body {
   display: flex;
   justify-content: center;
   height: 12rem;
-  perspective: 500px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 .card__front, .card__back {
   width: 16rem;
@@ -34,6 +39,7 @@ body {
   position: absolute;
   top: 0;
   transition: transform 500ms ease-in-out;
+  transform-style: preserve-3d;
 }
 .card__back {
   display: flex;
